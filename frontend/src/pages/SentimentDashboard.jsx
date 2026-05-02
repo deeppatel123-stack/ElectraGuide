@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_BASE_URL from '../apiConfig';
 
 const SentimentDashboard = () => {
   const [polls, setPolls] = useState([]);
@@ -8,7 +9,7 @@ const SentimentDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await fetch('/api/dashboard');
+        const response = await fetch(`${API_BASE_URL}/api/dashboard`);
         if (response.ok) {
           const data = await response.json();
           setPolls(data.polls || []);

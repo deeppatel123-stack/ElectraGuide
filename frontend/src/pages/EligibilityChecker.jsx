@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import API_BASE_URL from '../apiConfig';
 
 const EligibilityChecker = () => {
   const [formData, setFormData] = useState({ state: '', county: '', zip: '' });
@@ -11,7 +12,7 @@ const EligibilityChecker = () => {
     
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/eligibility', {
+      const response = await fetch(`${API_BASE_URL}/api/eligibility`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ location: formData.state, details: formData })
