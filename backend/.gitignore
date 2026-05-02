@@ -1,0 +1,42 @@
+# =========================
+
+# BACKEND (Node + Express)
+
+# =========================
+
+node_modules/
+
+# Env files (VERY IMPORTANT)
+
+.env
+.env.*
+
+# Logs
+
+logs/
+*.log
+npm-debug.log*
+
+# Build (if using babel/typescript)
+
+dist/
+build/
+
+# Temp
+
+tmp/
+temp/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE
+
+.vscode/
+.idea/
+
+# MongoDB local storage
+
+data/db/
